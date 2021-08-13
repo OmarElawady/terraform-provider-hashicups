@@ -13,7 +13,7 @@ variable "coffee_name" {
 }
 
 resource "hashicups_coffees" "all" {
-  name = "khaled6"
+  name = "khaled5"
 
 }
 
@@ -22,9 +22,6 @@ resource "hashicups_menu" "all1" {
   depends_on = [
     hashicups_coffees.all
   ]
-  triggers = {
-    coffe_name = hashicups_coffees.all
-  }
 }
 
 # Returns all coffees
